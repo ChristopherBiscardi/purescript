@@ -1,6 +1,6 @@
-MAINTAINER Christopher Biscardi <chris@christopherbiscardi.com>
-
 FROM node:0.10.35
+
+MAINTAINER Christopher Biscardi <chris@christopherbiscardi.com>
 
 RUN apt-get update && apt-get install wget -y
 
