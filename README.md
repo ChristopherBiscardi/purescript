@@ -6,6 +6,52 @@
 PureScript is a small strongly typed programming language that
 compiles to JavaScript.
 
+# Usage
+
+## Start a psci session
+
+```bash
+docker run -it --rm purescript
+  ____                 ____            _       _
+ |  _ \ _   _ _ __ ___/ ___|  ___ _ __(_)_ __ | |_
+ | |_) | | | | '__/ _ \___ \ / __| '__| | '_ \| __|
+ |  __/| |_| | | |  __/___) | (__| |  | | |_) | |_
+ |_|    \__,_|_|  \___|____/ \___|_|  |_| .__/ \__|
+                                        |_|
+
+:? shows help
+
+Expressions are terminated using Ctrl+D
+> :t 5
+Compiling Prelude
+Compiling Prelude.Unsafe
+Compiling Data.Function
+Compiling Data.Eq
+Compiling Control.Monad.Eff
+Compiling Control.Monad.Eff.Unsafe
+Compiling Control.Monad.ST
+Compiling Debug.Trace
+Prim.Number
+> 5+5
+10
+> :q
+See ya!
+```
+
+## Initialize and run a new project with pulp
+
+```bash
+> mkdir new-project && cd new-project
+> docker run -itv `pwd`:/opt/new-project purescript bash
+$ cd /opt/new-project
+$ pulp init
+* Generating project skeleton in /opt/new-project
+$ pulp run
+* Building project in /opt/new-project
+* Build successful.
+Hello sailor!
+```
+
 # Language
 
 ## DSLs
@@ -87,12 +133,12 @@ main = do
 * psc-make
 * psc-docs
 * psci
-* [bower][http://bower.io/]
-* [pulp][https://github.com/bodil/pulp]
+* [bower](http://bower.io/)
+* [pulp](https://github.com/bodil/pulp)
 
 ## Node Base Image
-* [node][http://nodejs.org/]
-* [npm][https://www.npmjs.com/]
+* [node](http://nodejs.org/)
+* [npm](https://www.npmjs.com/)
 
 # More Info
 
