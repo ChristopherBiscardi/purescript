@@ -11,7 +11,7 @@ compiles to JavaScript.
 ## Start a psci session
 
 ```bash
-docker run -it --rm purescript
+> docker run -it --rm purescript
   ____                 ____            _       _
  |  _ \ _   _ _ __ ___/ ___|  ___ _ __(_)_ __ | |_
  | |_) | | | | '__/ _ \___ \ / __| '__| | '_ \| __|
@@ -53,6 +53,21 @@ Hello sailor!
 ```
 
 # Language
+
+Purescript includes:
+
+* Algebraic data types
+* Pattern matching
+* Type inference
+* Type classes
+* Higher kinded types
+* Rank-N types
+* Extensible records
+* Extensible effects
+* Modules
+* Simple FFI
+* No runtime system
+* Human-readable output
 
 ## DSLs
 
