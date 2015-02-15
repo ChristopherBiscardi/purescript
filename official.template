@@ -1,1 +1,1 @@
-{raw-version}: git://github.com/christopherbiscardi/purescript@5f8fe4842045ce59a73752e3ded64f8dc2f257e8 {folder}
+{raw-version}: git://github.com/christopherbiscardi/purescript@{commit} {folder}
