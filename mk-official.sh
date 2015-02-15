@@ -3,7 +3,8 @@
 # remove any previous file
 touch .tmp/official-commits
 rm .tmp/official-commits
-echo "# maintainer ChristopherBiscardi <chris@christopherbiscardi.com> (@christopherbiscardi)\n" >> .tmp/official-commits
+sed 's/^/# maintainer /g' MAINTAINERS >> .tmp/official-commits
+echo '' >> .tmp/official-commits
 
 while read line
 do
