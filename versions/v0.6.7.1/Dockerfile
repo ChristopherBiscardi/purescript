@@ -1,4 +1,4 @@
-FROM node:0.10.36
+FROM node:0.10
 
 MAINTAINER Christopher Biscardi <chris@christopherbiscardi.com>
 
