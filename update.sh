@@ -19,6 +19,9 @@ do
     name=$line
     if [ "$line" != "" ] && [[ $line != v0.5* ]]; then
         mkdir -p versions/"$line"
-        sed s/{version}/"$line"/g Dockerfile.template > versions/"$line"/Dockerfile
+        wget "https://github.com/purescript/purescript/releases/download/$line/linux64.sha" -O "versions/$line/linux64.sha"
+        SHA=$(awk '{print $1}' versions/v0.6.8/linux64.sha)
+        sed s/{version}/"$line"/g Dockerfile.template \
+            | sed s/{SHA}/"$SHA"/g > versions/"$line"/Dockerfile
     fi
 done < .tmp/versions.txt
