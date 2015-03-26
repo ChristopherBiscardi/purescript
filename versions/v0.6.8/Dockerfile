@@ -6,7 +6,7 @@ ENV PURESCRIPT_DOWNLOAD_SHA1 381998669b1aeb914f8987eea26934d026747f2e
 
 RUN cd /opt \
     && wget https://github.com/purescript/purescript/releases/download/v0.6.8/linux64.tar.gz \
-    && echo "$PURESCRIPT_DOWNLOAD_SHA1 linux64.tar.gz" sha1sum -c - \
+    && echo "$PURESCRIPT_DOWNLOAD_SHA1 linux64.tar.gz" | sha1sum -c - \
     && tar -xvf linux64.tar.gz \
     && rm /opt/linux64.tar.gz
 
