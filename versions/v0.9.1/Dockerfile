@@ -1,8 +1,6 @@
-FROM node:4
+FROM node:6
 
 MAINTAINER Christopher Biscardi <chris@christopherbiscardi.com>
-
-WORKDIR /tmp
 
 ENV PURESCRIPT_DOWNLOAD_SHA1 9e8ff98e1e5d0dbf34df5124dc42d3b73e9dc257
 
