@@ -12,10 +12,9 @@ RUN cd /opt \
 
 ENV PATH /opt/purescript:$PATH
 
-RUN npm install -g bower pulp
+RUN cd /tmp \
+    && npm install -g bower pulp \
+    && pulp init 2> /dev/null || true \
+    && bower install purescript-psci-support --allow-root --save-dev
 
-RUN pulp init 2> /dev/null || true
-
-RUN bower install purescript-psci-support --allow-root --save-dev
-
-CMD [ "/usr/local/bin/pulp", "psci" ]
+CMD cd /tmp && pulp psci
